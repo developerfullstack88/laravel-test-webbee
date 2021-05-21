@@ -94,7 +94,7 @@ class MenuController extends BaseController
     ]
      */
 
-    /* this will get all menus */
+    /*this will get all menus*/
     public function getMenuItems() {
       $menus=MenuItem::with(['children.children2'])
       ->where('parent_id',null)->get();
